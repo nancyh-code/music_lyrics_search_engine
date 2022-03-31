@@ -3,13 +3,14 @@ body {
 }
 header {
   background-color: #95e1d3;
-  padding: 2rem 0;
+  padding: 2.9rem 0;
   text-align: center;
   color: #1a1c1a;
   font-size: 2.4rem;
   text-transform: uppercase;
   font-weight: bold;
   font-family: "Fredoka", sans-serif;
+  margin-top: -20px;
 }
 legend {
   text-align: center;
@@ -44,13 +45,15 @@ form {
 
 form label {
   display: block;
-  margin: 1rem 0;
+  margin: 0.28rem 0;
   color: #f38181;
   text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: bold;
 }
 @media (min-width: 768px) {
   form label {
-    margin: 0.5rem 0;
+    margin: 0.28rem 0;
   }
 }
 
@@ -63,33 +66,104 @@ form input[type="text"] {
 form input[type="submit"] {
   background-color: #f38181;
   border: none;
-  border-radius: 0.5rem;
-  font-size: 1.3rem;
+  border-radius: 0.35rem;
+  font-size: 1.25rem;
   text-transform: uppercase;
   font-weight: 600;
   font-family: "Fredoka", sans-serif;
   color: #1a1c1a;
-  padding: 0.8rem;
+  padding: 0.69rem;
   display: block;
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 1.09rem;
 }
 form input[type="submit"]:hover {
   cursor: pointer;
   background-color: #e56464;
+  color: #fafbfc;
 }
 
-.alerta {
+.alert {
   border-bottom: 2px solid #d51007;
   text-align: center;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.2rem;
   width: auto;
   display: block;
+  font-family: "Fredoka", sans-serif;
+  font-weight: 600;
 }
 
 .text-center {
   text-align: center;
+  font-family: "Fredoka", sans-serif;
+  font-weight: 600;
 }
-.letra {
+.lyrics {
   white-space: pre-wrap;
+  font-family: "Fredoka", sans-serif;
+}
+
+.spinner {
+  margin: 100px auto;
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+.cube1,
+.cube2 {
+  background-color: #f38181;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  -webkit-animation: sk-cubemove 1.2s infinite ease-in-out;
+  animation: sk-cubemove 1.2s infinite ease-in-out;
+}
+
+.cube2 {
+  -webkit-animation-delay: -0.5s;
+  animation-delay: -0.5s;
+}
+
+@-webkit-keyframes sk-cubemove {
+  25% {
+    -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
+  }
+  50% {
+    -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
+  }
+  75% {
+    -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg)
+      scale(0.5);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+  }
+}
+
+@keyframes sk-cubemove {
+  25% {
+    transform: translateX(42px) rotate(-90deg) scale(0.5);
+    -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
+  }
+  50% {
+    transform: translateX(42px) translateY(42px) rotate(-179deg);
+    -webkit-transform: translateX(42px) translateY(42px) rotate(-179deg);
+  }
+  50.1% {
+    transform: translateX(42px) translateY(42px) rotate(-180deg);
+    -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
+  }
+  75% {
+    transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+    -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg)
+      scale(0.5);
+  }
+  100% {
+    transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+  }
 }

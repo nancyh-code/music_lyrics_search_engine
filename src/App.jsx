@@ -1,11 +1,12 @@
 import { useState } from "react";
-import LyricApp from "./components/LyricApp";
+import LyricsApp from "./components/LyricsApp";
+import { LyricsProvider } from "./context/LyricsProvider";
 
 function App() {
   return (
-    <div>
-      <LyricApp />
-    </div>
+    <LyricsProvider>
+      <LyricsApp />
+    </LyricsProvider>
   );
 }
 
